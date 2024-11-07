@@ -27,7 +27,7 @@ app.use(cookieParser());
 
 app.use(
     cors({
-        origin:"http://localhost:3000",
+        origin:"https://studynotion-hosting-orcin.vercel.app",
         credentials:true
     })
 )

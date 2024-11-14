@@ -258,7 +258,12 @@ const CourseDetails = () => {
               <p className="space-x-3 pb-4 text-3xl font-semibold text-richblack-5">
                 Rs. {price}
               </p>
-              <button className="yellowButton" onClick={handleBuyCourse}>
+             <button className="yellowButton"
+                onClick={
+                user && courseData?.data?.CourseDetails?.studentsEnrolled.includes(user?._id)
+                  ? () => navigate("/dashboard/enrolled-courses")
+                  : handleBuyCourse
+                }>
                   {user && courseData?.data?.CourseDetails?.studentsEnrolled.includes(user?._id)
                   ? "Go To Course"
                   : "Buy Now"}

@@ -54,7 +54,7 @@ const VideoDetailsSidebar = ({setReviewModal}) => {
           <FiMenu />
       </div>
       <div className={` absolute top-0 lg:relative
-      ${isSidebarOpen ? "w-[320px]":"w-0"} transition-all duration-200 overflow-hidden
+      ${isSidebarOpen ? "w-[280px]":"w-0"} transition-all duration-200 overflow-hidden
       flex flex-col h-[calc(100vh-3.5rem)] lg:w-[320px]  border-r-[1px] border-r-richblack-700 bg-richblack-800`}
       onClick={(e)=>e.stopPropagation()}
       ref={sidebarRef}

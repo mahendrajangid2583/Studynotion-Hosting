@@ -1,10 +1,11 @@
-import React,{useState,useEffect} from 'react'
+import React,{useRef,useState,useEffect} from 'react'
 import { useSelector } from 'react-redux';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import IconBtn from '../../common/IconBtn';
 import { BsChevronDown } from "react-icons/bs"
 import { IoIosArrowBack } from "react-icons/io"
 import { FiMenu } from 'react-icons/fi';
+import { useOnClickOutside } from '../../../hooks/useOnClickOutside'
 
 const VideoDetailsSidebar = ({setReviewModal}) => {
 
@@ -41,6 +42,8 @@ const VideoDetailsSidebar = ({setReviewModal}) => {
   },[courseSectionData, courseEntireData, location.pathname]);
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const sidebarRef = useRef();
+  useOnClickOutside(sidebarRef,()=>setIsSidebarOpen(false));
 
   return (
     <div className='relative z-20'>
@@ -52,7 +55,10 @@ const VideoDetailsSidebar = ({setReviewModal}) => {
       </div>
       <div className={` absolute top-0 lg:relative
       ${isSidebarOpen ? "w-[320px]":"w-0"} transition-all duration-200 overflow-hidden
-      flex flex-col h-[calc(100vh-3.5rem)] lg:w-[320px]  border-r-[1px] border-r-richblack-700 bg-richblack-800`}>
+      flex flex-col h-[calc(100vh-3.5rem)] lg:w-[320px]  border-r-[1px] border-r-richblack-700 bg-richblack-800`}
+      onClick={(e)=>e.stopPropagation()}
+      ref={sidebarRef}
+        >
          
         {/* hamburger menu for mobile view */}
         <div

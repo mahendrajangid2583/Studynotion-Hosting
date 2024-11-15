@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import {sidebarLinks} from '../../../data/dashboard-links'
 import {logout} from '../../../services/operations/authAPI'
 import { useDispatch, useSelector } from 'react-redux'
@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import { VscSignOut } from "react-icons/vsc";
 import ConfirmationModal from '../../common/ConfirmationModal'
 import { FiMenu } from 'react-icons/fi'
-
+import { useOnClickOutside } from '../../../hooks/useOnClickOutside'
 
 const Sidebar = () => {
 
@@ -18,6 +18,8 @@ const Sidebar = () => {
     const [confirmationModal, setConfirmationModal] = useState(null)
     
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const sidebarRef = useRef();
+    useOnClickOutside(sidebarRef,()=>setIsSidebarOpen(false));
 
     if(profileLoading || authLoading){
         return (
@@ -29,7 +31,7 @@ const Sidebar = () => {
   return (
     <div className='relative z-20'>
         <div
-         className=' absolute top-2 left-2 text-lg lg:hidden bg-richblack-600'
+         className=' absolute top-2 left-2 text-xl lg:hidden bg-richblack-600'
          onClick={()=>setIsSidebarOpen(!isSidebarOpen)}
         >
           <FiMenu />
@@ -37,10 +39,13 @@ const Sidebar = () => {
         <div className={` absolute top-0 lg:relative flex overflow-hidden 
         ${isSidebarOpen? "w-[220px]":"w-0"} transition-all duration-300
         lg:min-w-[220px] flex-col border-r-[2px] border-r-richblack-700
-         h-[calc(100vh-3.5rem)] bg-richblack-800 py-10`}>
+         h-[calc(100vh-3.5rem)] bg-richblack-800 py-10`}
+         onClick={(e)=>e.stopPropagation()}
+         ref={sidebarRef}
+        >
 
               <div
-               className=' absolute top-2 left-2 text-lg lg:hidden'
+               className=' absolute top-2 left-2 text-xl lg:hidden'
                 onClick={()=>setIsSidebarOpen(!isSidebarOpen)}
                 >
                 <FiMenu />

@@ -26,6 +26,12 @@ const CourseSlider = ({Courses}) => {
             1024: {
               slidesPerView: 3,
             },
+            700:{
+              slidesPerView: 2,
+            },
+            240:{
+              slidesPerView: 1,
+            }
           }}
           className="max-h-[30rem]"
         >

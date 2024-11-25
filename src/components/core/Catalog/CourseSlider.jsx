@@ -18,7 +18,7 @@ const CourseSlider = ({Courses}) => {
         <Swiper
           slidesPerView={1}
           spaceBetween={25}
-{/*           freeMode={true} */}
+       //freeMode={true} 
           navigation={true}
         //   loop={true}
           modules={[FreeMode,Autoplay, Pagination, Navigation]}

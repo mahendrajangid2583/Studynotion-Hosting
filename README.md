@@ -43,12 +43,7 @@ StudyNotion is a dynamic educational platform where students can purchase course
 - **Backend Hosting**: (Add specific details if available)
 
 ---
-
-## Installation
-
-Follow these steps to run the project locally:
-
-1. **Clone the repository**:
+**Clone the repository**:
    ```bash
    git clone https://github.com/mahendrajangid2583/Studynotion-Hosting.git
    cd Studynotion-Hosting

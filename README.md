@@ -1,31 +1,66 @@
-# React & Tailwind CSS Starter Pack
+# StudyNotion - Educational Platform
 
-This is a starter pack for creating React projects with Tailwind CSS configured. It uses React version **18.2** and Tailwind CSS version **3.2**.
+[Live Demo](https://studynotion-hosting-orcin.vercel.app/)
 
-## Usage
+StudyNotion is a dynamic educational platform where students can purchase courses, and instructors can create and sell courses. Built with a full-stack architecture, the platform provides a seamless user experience for both learning and teaching.
 
-This starter pack includes a basic setup for using **Tailwind CSS with React**. To start building your own components and styles, follow these steps:
+## Features
 
-1. Clone the repository to your local machine.
-    ```sh
-    git clone https://github.com/thepranaygupta/react-tailwind-css-starter-pack.git
-    ```
+### For Students:
+- Browse and search for courses across multiple categories.
+- Purchase courses with secure payment integration.
+- Access purchased courses and track progress.
+- User-friendly dashboard for managing enrolled courses.
 
-1. Install the required packages.
-    ```sh
-    cd react-tailwind-css-starter-pack
-    npm install
-    ```
+### For Instructors:
+- Create, manage, and upload courses with detailed sections and subsections.
+- Track sales and revenue through an intuitive dashboard.
+- Engage with students through course content.
 
-1. Start the development server.
-    ```sh
-    npm start
-    ```
-1. Open the project in your browser at [`http://localhost:3000`](http://localhost:3000) to view your project.
-1. Create your React components and add your styles using Tailwind classes. You can also create new CSS files and import them into your components.
+### Core Functionality:
+- User authentication and role-based access control (student/instructor).
+- Responsive and modern UI for all devices.
+- Secure backend with efficient database integration.
+- Payment gateway integration for smooth transactions.
 
-The project is set up to use `postcss-cli` to process your CSS files. You can add your own `tailwind.config.js` file to customize your Tailwind setup.
+---
 
-## Contributing
+## Tech Stack
 
-Contributions are welcome! If you have any suggestions or find any issues, please feel free to open an issue or a pull request.
+### Frontend:
+- **React.js**: Component-based UI with a focus on performance.
+- **CSS/SCSS**: For styling and responsiveness.
+
+### Backend:
+- **Node.js**: Server-side logic.
+- **Express.js**: Framework for building REST APIs.
+
+### Database:
+- **MongoDB**: NoSQL database for handling course data and user information.
+
+### Hosting:
+- **Vercel**: Frontend hosting for fast delivery.
+- **Backend Hosting**: (Add specific details if available)
+
+---
+
+## Installation
+
+Follow these steps to run the project locally:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/mahendrajangid2583/Studynotion-Hosting.git
+   cd Studynotion-Hosting
+Studynotion-Hosting/
+│
+├── client/               # Frontend code (React)
+│   ├── src/              # Source code
+│   └── public/           # Static assets
+│
+├── server/               # Backend code (Node.js, Express)
+│   ├── routes/           # API routes
+│   ├── controllers/      # Request handling logic
+│   └── models/           # Database schemas
+│
+└── .env                  # Environment variables

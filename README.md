@@ -52,15 +52,3 @@ Follow these steps to run the project locally:
    ```bash
    git clone https://github.com/mahendrajangid2583/Studynotion-Hosting.git
    cd Studynotion-Hosting
-Studynotion-Hosting/
-│
-├── client/               # Frontend code (React)
-│   ├── src/              # Source code
-│   └── public/           # Static assets
-│
-├── server/               # Backend code (Node.js, Express)
-│   ├── routes/           # API routes
-│   ├── controllers/      # Request handling logic
-│   └── models/           # Database schemas
-│
-└── .env                  # Environment variables

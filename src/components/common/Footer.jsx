@@ -151,7 +151,7 @@ const Footer = () => {
                     }
                 </div>
                 <div className=' flex  items-center gap-1 lg:mx-0 mx-auto'>
-                  Made with <FaHeart color='red'/>  CodeHelp © 2023 Studynotion
+                  Made by <FaHeart color='red'/>  Mahendra © 2023 Studynotion
                 </div>
             </div>
 
